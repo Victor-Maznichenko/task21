@@ -8,13 +8,14 @@ public class Main {
         int tempValue;
         int previousValue = 1;
         int nextValue = 1;
-        int count = 1;
-        while(previousValue <= b){
+        int count = a == 1 ? 1 : 0;
+
+        while(nextValue <= b){
             tempValue = nextValue;
             nextValue = previousValue + nextValue + 1;
             previousValue = tempValue;
-            System.out.println(nextValue);
-            if(nextValue >= a){
+            System.out.println(previousValue + "    " + nextValue);
+            if(previousValue >= a){
                 count++;
             }
         }
@@ -23,9 +24,9 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите число a:");
+        System.out.println("Enter a number:");
         int a = scanner.nextInt();
-        System.out.println("Введите число b:");
+        System.out.println("Enter b number:");
         int b = scanner.nextInt();
 
         System.out.println("RESULT: " + LeonardoNumbersInRange(a, b));
