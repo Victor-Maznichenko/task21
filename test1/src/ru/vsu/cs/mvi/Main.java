@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//task 5
 public class Main {
     public static void printStarTriangle(int s) {
         int halfS = s / 2;
